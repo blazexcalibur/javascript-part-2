@@ -122,11 +122,7 @@ function operationMaker(op) {
         }
 }
 
-
-
-
-
-
+/*
 var adder = operationMaker("add");
 var subber = operationMaker("subtract");
 var multi = operationMaker("mult");
@@ -141,3 +137,5 @@ console.log(sum);
 console.log(diff);
 console.log(product);
 console.log(quotient);
+*/
+
