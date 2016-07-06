@@ -15,36 +15,40 @@ Finally, create a bunch of warriors and make them fight together.
 */
 
 function warriors(name, gender) {
-    return {
-        name: name,
-        gender: gender,
-        level: 1,
-        weapon: "wooden sword",
-        power: Math.round(Math.random())*100,
-        fight: function fighting() {
+    
+        this.name = name;
+        this.gender= gender;
+        this.level= 1;
+        this.weapon = "wooden sword";
+        this.power = Math.round(Math.random()*100);
+}
+
+warriors.prototype = {
+    fight: function fighting() {
         console.log(" rushes to the arena with ");
         },
         faceoff: function facingOff(opponent) {
         if (opponent.power > this.power) {
             console.log("you\'ve lost the faceoff!");
         }  
-        if (opponent.power < this.power) {
+        else if (opponent.power < this.power) {
             console.log("you\'ve win the faceoff");
             } else {
                 console.log("it's a draw!");
             }
         }
-    }
 }
+
 
 var Odin = new warriors("Odin","M");
 var Hades = new warriors("Hades","M");
 var Medusa = new warriors("Medusa","F");
 var Zeus = new warriors("Zeus", "M");
 
-console.log(Odin.power + " " + Hades.power);
+//console.log(Odin.power + " " + Hades.power);
+
 Odin.faceoff(Hades);
 
-console.log(Medusa.power + " " + Zeus.power);
+//console.log(Medusa.power + " " + Zeus.power);
 Medusa.faceoff(Zeus);
    
