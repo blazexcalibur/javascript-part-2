@@ -105,19 +105,19 @@ var sqr = numberss.map(squarednum);
 
 function operationMaker(op) {
     if (op === "add")
-        return function add(num1, num2) {
+        return function (num1, num2) {
             return num1 + num2;
         }
          if (op === "subtract")
-        return function add(num1, num2) {
+        return function (num1, num2) {
             return num1 - num2;
         }
          if (op === "mult")
-        return function add(num1, num2) {
+        return function (num1, num2) {
             return num1 * num2;
         }
          if (op === "div")
-        return function add(num1, num2) {
+        return function (num1, num2) {
             return num1 / num2;
         }
 }
@@ -128,14 +128,13 @@ var subber = operationMaker("subtract");
 var multi = operationMaker("mult");
 var divider = operationMaker("div");
 
-var sum = adder(1,1);
-var diff = subber(3,1);
-var product = multi(2,1);
-var quotient = divider(6,3);
+var sum = adder(1,2);
+var diff = subber(5,1);
+var product = multi(5,1);
+var quotient = divider(18,3);
 
 console.log(sum);
 console.log(diff);
 console.log(product);
 console.log(quotient);
 */
-
