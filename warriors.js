@@ -39,12 +39,12 @@ function warriors(name, gender) {
 
 var Odin = new warriors("Odin","M");
 var Hades = new warriors("Hades","M");
-var Medusa = new warriors("Medusa","M");
+var Medusa = new warriors("Medusa","F");
 var Zeus = new warriors("Zeus", "M");
 
 console.log(Odin.power + " " + Hades.power);
 Odin.faceoff(Hades);
 
-
-
+console.log(Medusa.power + " " + Zeus.power);
+Medusa.faceoff(Zeus);
    
